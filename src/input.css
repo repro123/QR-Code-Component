@@ -1,0 +1,35 @@
+@import url(https://fonts.google.com/specimen/Outfit);
+
+@import "tailwindcss";
+
+@theme {
+  --color-background-300: hsl(212, 45%, 89%);
+  --color-heading-900: hsl(218, 44%, 22%);
+  --color-paragraph-500: hsl(220, 15%, 55%);
+  --color-container: hsl(0, 0%, 100%);
+
+  --font-outfit: "Outfit", sans-serif;
+}
+
+@layer components {
+  .link {
+    color: var(--color-heading-900);
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover {
+      color: blue;
+    }
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
